@@ -17,8 +17,9 @@ def create_app(config_class=Config):
     migrate.init_app(app, db)
 
     # Registrar Blueprints (Rutas) - Lo haremos en el Sprint 3
-    # from src.api.main import bp as main_bp
-    # app.register_blueprint(main_bp)
+    from src.api import users, tasks
+    app.register_blueprint(users.bp)
+    app.register_blueprint(tasks.bp)
 
     @app.route('/api/health')
     def health_check():
