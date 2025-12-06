@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from src.config import Config
-from src.extensions import db, migrate
+from src.extensions import db, migrate, jwt
 
 # Importamos los modelos para que Flask-Migrate los detecte
 from src.models.user import User
@@ -15,11 +15,14 @@ def create_app(config_class=Config):
     CORS(app)
     db.init_app(app)
     migrate.init_app(app, db)
+    jwt.init_app(app) # Registrar JWT en la app
 
     # Registrar Blueprints (Rutas) - Lo haremos en el Sprint 3
-    from src.api import users, tasks
+    from src.api import users, tasks, auth
     app.register_blueprint(users.bp)
     app.register_blueprint(tasks.bp)
+    app.register_blueprint(auth.bp)
+
 
     @app.route('/api/health')
     def health_check():

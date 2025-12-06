@@ -55,3 +55,13 @@ TaskMaster es una solución Full-Stack diseñada para adaptarse a flujos de trab
   - `TaskCard`: Renderizado visual de tareas.
   - `TaskForm`: Formulario para creación de tareas.
 - **Service Layer:** Configuración centralizada de API en `src/services/api.js`.
+
+### [0.5.0] - 2025-12-06
+#### Added
+- **Security & Auth:**
+  - Implementación de JWT (JSON Web Tokens) con `flask-jwt-extended`.
+  - Hashing de contraseñas usando `Werkzeug` (scrypt).
+  - Endpoints protegidos (`@jwt_required`) para creación y lectura de tareas.
+- **API Endpoints:**
+  - `POST /api/auth/login`: Autenticación y generación de tokens.
+  - Actualización de `POST /api/users`: Ahora guarda contraseñas encriptadas.
