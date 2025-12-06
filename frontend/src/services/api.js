@@ -8,5 +8,19 @@ const api = axios.create({
         'Content-Type': 'application/json',
     }
 });
+// INTERCEPTOR: Se ejecuta antes de cada petición
+api.interceptors.request.use(
+    (config) => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            // Si hay token, lo pegamos en el header Authorization
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error);
+    }
+);
 
 export default api;

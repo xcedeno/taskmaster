@@ -65,3 +65,24 @@ TaskMaster es una solución Full-Stack diseñada para adaptarse a flujos de trab
 - **API Endpoints:**
   - `POST /api/auth/login`: Autenticación y generación de tokens.
   - Actualización de `POST /api/users`: Ahora guarda contraseñas encriptadas.
+
+  ### [0.6.0] - 2025-12-06
+#### Added
+- **Frontend Auth System:**
+  - `AuthContext`: Estado global para manejo de sesión de usuario.
+  - `LoginPage`: Interfaz de usuario para inicio de sesión.
+  - Persistencia de sesión mediante `localStorage`.
+- **API Integration:**
+  - **Axios Interceptor:** Inyección automática del Token JWT en los headers de cada petición.
+  - Manejo de errores 401 (Logout automático).
+- **UX/UI:**
+  - Renderizado condicional (Dashboard vs. Login).
+  - Botón de Logout funcional.
+
+---
+## 🏁 Hitos del Proyecto 1 (TaskMaster)
+- [x] Infraestructura Dockerizada (Frontend + Backend).
+- [x] Base de Datos Relacional con SQLAlchemy.
+- [x] API RESTful segura con JWT.
+- [x] Frontend Reactivo con Vite y React Context.
+- [x] Despliegue en entorno local exitoso.
