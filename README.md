@@ -25,7 +25,7 @@ TaskMaster es una solución Full-Stack diseñada para adaptarse a flujos de trab
    cd taskmaster
 
 ### Cambios
-    ### [0.1.0] - 2025-12-06
+### [0.1.0] - 2025-12-06
 #### Added
 - **Infraestructura Docker:** Configuración inicial de `docker-compose` para orquestar servicios.
 - **Backend Service:** Configuración de Flask con `flask-cors` y Dockerfile basado en Python 3.11-slim. Habilitado endpoint `/api/health` para pruebas de conectividad.
@@ -39,7 +39,7 @@ TaskMaster es una solución Full-Stack diseñada para adaptarse a flujos de trab
   - `Task`: Soporte para prioridades, estados y asignación.
 - **Config:** Sistema de configuración centralizado (`config.py`) y patrón Application Factory.
 
-### [0.3.0] - 2025-12-06
+### [0.3.0] - 2025-12-06 
 #### Added
 - **API Endpoints:**
   - `POST /api/users`: Registro de usuarios.
@@ -47,3 +47,11 @@ TaskMaster es una solución Full-Stack diseñada para adaptarse a flujos de trab
   - `POST /api/tasks`: Creación de tareas con validación de relaciones.
   - `GET /api/tasks`: Listado general de tareas con serialización JSON.
 - **Architecture:** Implementación modular con Flask Blueprints (`src/api/`).
+
+### [0.4.0] - 2025-12-06
+#### Added
+- **Frontend Integration:** Implementación de cliente HTTP con `axios`.
+- **UI Components:**
+  - `TaskCard`: Renderizado visual de tareas.
+  - `TaskForm`: Formulario para creación de tareas.
+- **Service Layer:** Configuración centralizada de API en `src/services/api.js`.
