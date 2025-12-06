@@ -21,5 +21,12 @@ TaskMaster es una solución Full-Stack diseñada para adaptarse a flujos de trab
 
 1. Clonar el repositorio:
    ```bash
-   git clone [https://github.com/tu-usuario/taskmaster.git](https://github.com/tu-usuario/taskmaster.git)
+   git clone [https://github.com/xcedeno/taskmaster.git](https://github.com/xcedeno/taskmaster.git)
    cd taskmaster
+
+### Cambios
+    ### [0.1.0] - 2025-12-06
+#### Added
+- **Infraestructura Docker:** Configuración inicial de `docker-compose` para orquestar servicios.
+- **Backend Service:** Configuración de Flask con `flask-cors` y Dockerfile basado en Python 3.11-slim. Habilitado endpoint `/api/health` para pruebas de conectividad.
+- **Frontend Service:** Inicialización de proyecto React + Vite con Dockerfile basado en Node 20-alpine. Configuración de `vite.config.js` para soporte de Hot Reloading en contenedores.
