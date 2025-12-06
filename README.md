@@ -38,3 +38,12 @@ TaskMaster es una solución Full-Stack diseñada para adaptarse a flujos de trab
   - `User`: Soporte para roles y autenticación.
   - `Task`: Soporte para prioridades, estados y asignación.
 - **Config:** Sistema de configuración centralizado (`config.py`) y patrón Application Factory.
+
+### [0.3.0] - 2025-12-06
+#### Added
+- **API Endpoints:**
+  - `POST /api/users`: Registro de usuarios.
+  - `GET /api/users`: Listado de usuarios.
+  - `POST /api/tasks`: Creación de tareas con validación de relaciones.
+  - `GET /api/tasks`: Listado general de tareas con serialización JSON.
+- **Architecture:** Implementación modular con Flask Blueprints (`src/api/`).
