@@ -30,3 +30,11 @@ TaskMaster es una solución Full-Stack diseñada para adaptarse a flujos de trab
 - **Infraestructura Docker:** Configuración inicial de `docker-compose` para orquestar servicios.
 - **Backend Service:** Configuración de Flask con `flask-cors` y Dockerfile basado en Python 3.11-slim. Habilitado endpoint `/api/health` para pruebas de conectividad.
 - **Frontend Service:** Inicialización de proyecto React + Vite con Dockerfile basado en Node 20-alpine. Configuración de `vite.config.js` para soporte de Hot Reloading en contenedores.
+
+### [0.2.0] - 2025-12-06
+#### Added
+- **Database Architecture:** Implementación de SQLAlchemy y Flask-Migrate.
+- **Data Models:**
+  - `User`: Soporte para roles y autenticación.
+  - `Task`: Soporte para prioridades, estados y asignación.
+- **Config:** Sistema de configuración centralizado (`config.py`) y patrón Application Factory.
